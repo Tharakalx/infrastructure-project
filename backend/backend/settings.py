@@ -23,9 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-de)%1+7o-&v&_j)6e=-y%=g4#zknl(#q&-wr+3&48_&72=ti(p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['54.151.253.85']
+
+STATIC_URL = '/static/'
+STATIC_ROOT = '/usr/share/nginx/html/static'
+
+# ALLOWED_HOSTS = []
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:80", # Example for a local frontend development server
 #   
@@ -80,7 +85,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-
+#docker compose
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -92,6 +97,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
     
 # }
+#locally
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
