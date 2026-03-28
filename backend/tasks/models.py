@@ -4,6 +4,6 @@ class Task(models.Model):
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    file = models.FileField(upload_to="uploads/", null=True, blank=True)
     def __str__(self):
         return self.title

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["54.254.87.78"]
 #   
 # ]
 CORS_ALLOW_ALL_ORIGINS = True
-
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 # Application definition
 
 INSTALLED_APPS = [
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'tasks',
     'rest_framework',
     'corsheaders',
+    "storages",
 ]
 
 MIDDLEWARE = [
