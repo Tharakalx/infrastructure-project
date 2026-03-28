@@ -1,3 +1,5 @@
+// src/api.js
+
 const API_URL = "/api";
 
 export const getTasks = async () => {
@@ -5,17 +7,19 @@ export const getTasks = async () => {
   return res.json();
 };
 
-export const createTask = async (formData) => {
+export const createTask = async (task) => {
   return fetch(`${API_URL}/tasks/`, {
     method: "POST",
-    body: formData,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(task),
   });
 };
 
-export const updateTask = async (id, formData) => {
+export const updateTask = async (id, task) => {
   return fetch(`${API_URL}/tasks/${id}/`, {
     method: "PUT",
-    body: formData,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(task),
   });
 };
 
