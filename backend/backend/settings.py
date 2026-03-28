@@ -17,6 +17,7 @@ AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
 
+
 AWS_S3_REGION_NAME = "ap-southeast-1"
 AWS_DEFAULT_ACL = None
 AWS_S3_FILE_OVERWRITE = False
@@ -35,7 +36,7 @@ SECRET_KEY = 'django-insecure-de)%1+7o-&v&_j)6e=-y%=g4#zknl(#q&-wr+3&48_&72=ti(p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["54.254.87.78"]
+ALLOWED_HOSTS = ["54.254.87.78", 'localhost']
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:80", # Example for a local frontend development server
 #   
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     "storages",
+
 ]
 
 MIDDLEWARE = [
