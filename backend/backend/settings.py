@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,10 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-de)%1+7o-&v&_j)6e=-y%=g4#zknl(#q&-wr+3&48_&72=ti(p'
 
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
+
+AWS_S3_REGION_NAME = "ap-southeast-1"  
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["54.254.87.78"]
+ALLOWED_HOSTS = ["54.254.87.78", 'localhost']
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:80", # Example for a local frontend development server
 #   
@@ -44,6 +52,7 @@ INSTALLED_APPS = [
     'tasks',
     'rest_framework',
     'corsheaders',
+    'storages',
 ]
 
 MIDDLEWARE = [
