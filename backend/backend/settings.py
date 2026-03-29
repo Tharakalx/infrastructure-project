@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-de)%1+7o-&v&_j)6e=-y%=g4#zknl(#q&-wr+3&48_&72=ti(p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["54.254.87.78", 'localhost']
+ALLOWED_HOSTS = ["54.254.87.78", 'localhost', 'www.taskmanager.run.place']
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:80", # Example for a local frontend development server
 #   
