@@ -14,11 +14,10 @@ export const createTask = async (formData) => {
 
 export const updateTask = async (id, formData) => {
   return fetch(`${API_URL}/tasks/${id}/`, {
-    method: "PUT",
+    method: "PATCH",   // ← change this
     body: formData,
   });
 };
-
 export const deleteTask = async (id) => {
   return fetch(`${API_URL}/tasks/${id}/`, {
     method: "DELETE",
